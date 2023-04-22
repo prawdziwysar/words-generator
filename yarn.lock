@@ -8647,11 +8647,6 @@ stop-iteration-iterator@^1.0.0:
   dependencies:
     internal-slot "^1.0.4"
 
-stopwords-json@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/stopwords-json/-/stopwords-json-1.2.0.tgz#f0c033a4f72ddbfc6fe5da5f50b6208a0a9d7567"
-  integrity sha512-oXWgWb4BKcs5YBWPD4uSKzcJLw2dz+CrdRKbwrCogal6q44jp5WZpJx7QBX0dOl9bCb5dpNjKevZAPCr5gra4Q==
-
 string-length@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/string-length/-/string-length-4.0.2.tgz#a8a8dc7bd5c1a82b9b3c8b87e125f66871b6e57a"
