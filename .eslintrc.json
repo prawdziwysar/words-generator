@@ -1,0 +1,29 @@
+{
+    "extends":[
+        "airbnb",
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:prettier/recommended",
+        "prettier"
+    ],
+    "rules": {
+        "import/extensions": "off",
+        "react/jsx-filename-extension": ["error", {"extensions":[".tsx"]}],
+        "max-lines": ["error", 100],
+        "padding-line-between-statements":["error",
+            {"blankLine": "always", "prev":"*", "next": ["return"]},
+            {"blankLine": "always", "prev":["function", "for", "if", "throw", "try"], "next": "*"},
+            {"blankLine": "always", "next":["function", "for", "if", "throw", "try"], "prev": "*"},
+            {"blankLine": "never", "next":["const", "let"], "prev": ["const", "let"]},
+            {"blankLine": "always", "next":"expression", "prev": ["const", "let"]}
+        ],
+        "no-use-before-define": "off",
+        "prettier/prettier": [
+            "off",
+            {
+              "endOfLine": "auto"
+            }
+          ]
+    }
+}
