@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/words-generator/static/js/main.ef4fe643.js",
+    "main.js": "/words-generator/static/js/main.4f1b8cdc.js",
     "index.html": "/words-generator/index.html",
-    "main.ef4fe643.js.map": "/words-generator/static/js/main.ef4fe643.js.map"
+    "main.4f1b8cdc.js.map": "/words-generator/static/js/main.4f1b8cdc.js.map"
   },
   "entrypoints": [
-    "static/js/main.ef4fe643.js"
+    "static/js/main.4f1b8cdc.js"
   ]
 }
