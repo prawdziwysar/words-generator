@@ -1,51 +1,32 @@
-import all from './pl.json'
-
-export default function WordsPresenter({ input }: { input: string }) {
+export default function WordsPresenter({
+    words,
+    wordsProgress,
+}: {
+    words: string[]
+    wordsProgress: number
+}) {
     return {
         getWords() {
-            const possibleLetters = input
-                .replaceAll(' ', '')
-                .toLowerCase()
-                .split('')
-                .reduce((current, newone) => {
-                    const element = current.find(
-                        (value) => value.letter === newone
-                    )
-
-                    if (element) {
-                        element.counter += 1
-
-                        return current
-                    }
-
-                    return [...current, { letter: newone, counter: 1 }]
-                }, [] as { letter: string; counter: number }[])
-
-            return all
-                .filter((word) => {
-                    return word
-                        .split('')
-                        .reduce((current, newone) => {
-                            const element = current.find(
-                                (value) => value.letter === newone
-                            )
-
-                            if (element) {
-                                element.counter += 1
-
-                                return current
-                            }
-
-                            return [...current, { letter: newone, counter: 1 }]
-                        }, [] as { letter: string; counter: number }[])
-                        .every(
-                            ({ letter, counter }) =>
-                                (possibleLetters.find(
-                                    (e) => e.letter === letter
-                                )?.counter ?? 0) >= counter
-                        )
-                })
-                .sort((a, b) => b.length - a.length)
+            return words
+        },
+        getWordsProgress() {
+            return new Intl.NumberFormat(navigator.language, {
+                style: 'percent',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0,
+            }).format(wordsProgress)
+        },
+        getWordsProgressValue() {
+            return Math.round(wordsProgress * 100)
+        },
+        displayProgress() {
+            return wordsProgress !== 1
+        },
+        displayEmptyState() {
+            return wordsProgress === 1 && !words.length
+        },
+        getEmtyStateText() {
+            return 'start writting something'
         },
     }
 }

@@ -10,7 +10,7 @@
     "rules": {
         "import/extensions": "off",
         "react/jsx-filename-extension": ["error", {"extensions":[".tsx"]}],
-        "max-lines": ["error", 100],
+        "max-lines": ["error", 200],
         "padding-line-between-statements":["error",
             {"blankLine": "always", "prev":"*", "next": ["return"]},
             {"blankLine": "always", "prev":["function", "for", "if", "throw", "try"], "next": "*"},
